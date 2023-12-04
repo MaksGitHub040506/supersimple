@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retro Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main_page.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <center><img src="{{ url_for('static', filename='icons/logo-white-transparent.png') }}" alt="Logo" width="150"></center>
+        </div>
+        <button onclick="addRow()">Добавить строку</button>
+        <button onclick="addColumn()">Добавить столбец</button>
+        <a href="/logout"><button>Выйти</button></a>
+    </div>
+    <div class="content">
+        <form id="myForm" method="POST">
+            <h1 id="tableTitle" contenteditable="true">{{ table_data[2] | safe }}</h1>
+
+            <table id="myTable">
+                {% if table_data[3] != "" %}
+                        {{ table_data[3] | safe }}
+                {% else %}
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                            <tr>
+                                <th contenteditable="true">Тема 1</th>
+                                <td>
+                                    <div class="input-block" name="cell_1_1">
+                                        <p contenteditable="true">--дата--</p>
+                                        <div class="dropdown">
+                                            <button class="dropbtn" onclick="toggleDropdown(this)">Color</button>
+                                            <div class="dropdown-content">
+                                                <a href="#" onclick="updateColor(this, 'green', 'cell_1_1')">
+                                                    <span class="color-circle green"></span>Green
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'red', 'cell_1_1')">
+                                                    <span class="color-circle red"></span>Red
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'yellow', 'cell_1_1')">
+                                                    <span class="color-circle yellow"></span>Yellow
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-block" name="cell_1_2">
+                                        <p contenteditable="true">--дата--</p>
+                                        <div class="dropdown">
+                                            <button class="dropbtn" onclick="toggleDropdown(this)">Color</button>
+                                            <div class="dropdown-content">
+                                                <a href="#" onclick="updateColor(this, 'green', 'cell_1_2')">
+                                                    <span class="color-circle green"></span>Green
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'red', 'cell_1_2')">
+                                                    <span class="color-circle red"></span>Red
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'yellow', 'cell_1_2')">
+                                                    <span class="color-circle yellow"></span>Yellow
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-block" name="cell_1_3">
+                                        <p contenteditable="true">--дата--</p>
+                                        <div class="dropdown">
+                                            <button class="dropbtn" onclick="toggleDropdown(this)">Color</button>
+                                            <div class="dropdown-content">
+                                                <a href="#" onclick="updateColor(this, 'green', 'cell_1_3')">
+                                                    <span class="color-circle green"></span>Green
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'red', 'cell_1_3')">
+                                                    <span class="color-circle red"></span>Red
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'yellow', 'cell_1_3')">
+                                                    <span class="color-circle yellow"></span>Yellow
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th contenteditable="true">Тема 2</th>
+                                <td>
+                                    <div class="input-block" name="cell_2_1">
+                                        <p contenteditable="true">--дата--</p>
+                                        <div class="dropdown">
+                                            <button class="dropbtn" onclick="toggleDropdown(this)">Color</button>
+                                            <div class="dropdown-content">
+                                                <a href="#" onclick="updateColor(this, 'green', 'cell_2_1')">
+                                                    <span class="color-circle green"></span>Green
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'red', 'cell_2_1')">
+                                                    <span class="color-circle red"></span>Red
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'yellow', 'cell_2_1')">
+                                                    <span class="color-circle yellow"></span>Yellow
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-block" name="cell_2_2">
+                                        <p contenteditable="true">--дата--</p>
+                                        <div class="dropdown">
+                                            <button class="dropbtn" onclick="toggleDropdown(this)">Color</button>
+                                            <div class="dropdown-content">
+                                                <a href="#" onclick="updateColor(this, 'green', 'cell_2_2')">
+                                                    <span class="color-circle green"></span>Green
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'red', 'cell_2_2')">
+                                                    <span class="color-circle red"></span>Red
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'yellow', 'cell_2_2')">
+                                                    <span class="color-circle yellow"></span>Yellow
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-block" name="cell_2_3">
+                                        <p contenteditable="true">--дата--</p>
+                                        <div class="dropdown">
+                                            <button class="dropbtn" onclick="toggleDropdown(this)">Color</button>
+                                            <div class="dropdown-content">
+                                                <a href="#" onclick="updateColor(this, 'green', 'cell_2_3')">
+                                                    <span class="color-circle green"></span>Green
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'red', 'cell_2_3')">
+                                                    <span class="color-circle red"></span>Red
+                                                </a>
+                                                <a href="#" onclick="updateColor(this, 'yellow', 'cell_2_3')">
+                                                    <span class="color-circle yellow"></span>Yellow
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                    </tbody>
+                {% endif %}
+            </table>
+
+            <button type="submit" onclick="event.preventDefault(); saveTableData()">Сохранить таблицу</button>
+        </form>
+    </div>
+</body>
+</html>

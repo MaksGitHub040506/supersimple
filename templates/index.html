@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRRT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Spectral:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/container.css') }}">
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="left-section">
+      <img class="logo" src=".{{ url_for('static', filename='icons/logo-red-transparent.png') }}" alt="Logo">
+    </div>
+    <div class="mid-section">
+      <button class="what-button" onclick="scrollWin(0)">Что такое TRRT?</button>
+      <button class="researches-button" onclick="scrollWin(2000)">Исследования</button>
+      <button class="contacts-button" onclick="scrollWin(2000)">Контакты</button>
+    </div>
+    <div class="right-section">
+      <a href="signup.html"><button class="sign-up-button">Регистрация</button></a>
+      <a href="login.html"><button class="log-in-button">Вход</button></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <img class="img" src="{{ url_for('static', filename='pics/background-pic.png') }}" alt="">
+
+    <div class="text-block">
+      <h1>&#x2022 Что такое TRRT?_</h1>
+      <p class="p">Предполагаемое расписание предполагает заблаговременное планирование учебных занятий,
+        но есть три основные проблемы, связанные с этим методом.
+        Во-первых, трудно точно предсказать, какие темы будут сложными или потребуют больше времени.
+        Во-вторых, неожиданные события или отвлекающие факторы могут нарушить заранее спланированный график.
+        Наконец, само составление расписания может стать формой прокрастинации.</p>
+
+      <p class="p">Ретроспективное расписание фокусируется на составлении списка предметов и тем, подлежащих изучению.
+        Этот процесс определения объема курса помогает разбить предметы на управляемые части.
+        Каждому предмету присваивается электронная таблица, и темы перечислены в первом столбце.
+        При изучении темы учащийся активно вспоминает информацию и записывает дату в соответствующую колонку.
+        Такой подход позволяет отслеживать частоту и уровень понимания каждой темы.</p>
+
+       <p class="p">Ретроспективное расписание способствует изменению мышления,
+         уделяя приоритетное внимание пониманию содержания, а не просто заполнению временных интервалов.
+         Сосредоточившись на отдельных темах и активно вспоминая информацию,
+         учащиеся могут расставить приоритеты в областях, требующих улучшения, и лучше усвоить материал.</p>
+
+
+    </div>
+
+    <img class="img" src="{{ url_for('static', filename='pics/example.png') }}" alt="">
+
+
+    <div class="text-block">
+      <h1>&#x2022 Исследования_</h1>
+      <p class="p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore voluptatem odit magnam ea quas temporibus ducimus, culpa totam quaerat autem quasi alias quia magni fugiat voluptatibus ad corrupti quod maxime.</p>
+    </div>
+
+    <footer class="footer">
+            <div class="content">
+              <div class="footer__wrapper">
+                <a href="#">
+                  <img class="social_image" src="../static/svg/whatsapp.svg" alt="whatsapp">
+                </a>
+
+                <a href="#">
+                  <img class="social_image" src="../static/svg/vk.svg" alt="vk">
+                </a>
+
+                <a href="#">
+                  <img class="social_image" src="../static/svg/youtube.svg" alt="youtube">
+                </a>
+
+                <a href="#">
+                  <img class="social_image" src="../static/svg/twitter.svg" alt="twitter">
+                </a>
+
+                <a href="#">
+                  <img class="social_image" src="../static/svg/facebook.svg" alt="facebook">
+                </a>
+              </div>
+            </div>
+        </footer>
+  </div>
+</body>
+</html>

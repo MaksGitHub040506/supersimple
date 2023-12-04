@@ -1,0 +1,85 @@
+.header{
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-section{
+  flex: .5;
+  width: 200px;
+  height: 100%;
+}
+
+.logo{
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.mid-section{
+  display: flex;
+  flex-direction: row;
+  flex: 1.5;
+  max-width: 500px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.what-button,
+.researches-button,
+.contacts-button{
+  background-color: white;
+  border: none;
+  height: 45px;
+  font-size: 18px;
+  transition: color .2;
+}
+
+.what-button:hover,
+.researches-button:hover,
+.contacts-button:hover{
+  opacity: .65;
+}
+
+.right-section{
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  flex: .5;
+  justify-content: right;
+  align-items: center;
+}
+
+.sign-up-button,
+.log-in-button{
+  color: #ED2647;
+  background-color: white;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 20px;
+  height: 42px;
+  border: none;
+  border-color: #ED2647;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  transition: background-color .2s, color .2s;
+}
+
+.log-in-button{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sign-up-button:hover,
+.log-in-button:hover{
+  background-color: #ED2647;
+  color: white;
+  height: 42px;
+}

@@ -1,0 +1,125 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+h1 {
+  color: #ADD8E6;
+}
+
+.logo {
+  background-color: #ADD8E6;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.sidebar {
+    background-color: #ADD8E6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+button {
+    border-radius: 15px;
+    border: solid;
+    border-color: #ADD8E6;
+    margin-bottom: 10px;
+    background-color: #fff;
+    color: #ADD8E6;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+
+
+table {
+    border: none;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+  font-weight: normal;
+  border: 1px solid #ADD8E6;
+  padding: 8px;
+  text-align: left;
+}
+.input-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-block input {
+    margin: 10px;
+    font-size: 20px;
+    width: 75px;
+}
+.input-block input[type="text"] {
+    margin-right: 10px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.color-circle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
